@@ -41,6 +41,7 @@ class Credito extends StatelessWidget {
         height: 15,
       ),
       ElevatedButton(
+        style: const ButtonStyle(elevation: WidgetStatePropertyAll<double>(0)),
         onPressed: () {},
         child: const Text(
           "Renegociar",

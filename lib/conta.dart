@@ -85,6 +85,7 @@ class Conta extends StatelessWidget {
         height: 30,
       ),
       const Card(
+        elevation: 0,
         child: ListTile(
           title: Text("Meus Cartões"),
           leading: Icon(Icons.credit_card),
@@ -94,6 +95,7 @@ class Conta extends StatelessWidget {
         height: 30,
       ),
       Card(
+        elevation: 0,
         child: Container(
             padding: const EdgeInsets.all(10),
             child: const ListTile(

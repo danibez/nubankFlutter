@@ -13,7 +13,7 @@ class Conta extends StatelessWidget {
         children: [
           Text(
             "Conta",
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           Icon(Icons.arrow_forward_ios_outlined),
         ],
@@ -23,7 +23,7 @@ class Conta extends StatelessWidget {
       ),
       const Text(
         "R\$1000,00",
-        style: TextStyle(fontSize: 26),
+        style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
       ),
       const SizedBox(
         height: 30,
@@ -34,29 +34,31 @@ class Conta extends StatelessWidget {
           Column(children: [
             IconButton.filledTonal(
               style: const ButtonStyle(
-                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(30)),
+                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(40)),
               ),
-              icon: const Icon(Icons.pix_outlined),
+              icon: const Icon(Icons.pix),
               onPressed: () {},
             ),
-            const Text("Pix")
+            const Text("Área Pix",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
           ]),
           Column(children: [
             IconButton.filledTonal(
               style: const ButtonStyle(
-                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(30)),
+                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(40)),
               ),
               icon: const Icon(Icons.money),
               iconSize: 30,
               color: Colors.black,
               onPressed: () {},
             ),
-            const Text("Pagamentos")
+            const Text("Pagamentos",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
           ]),
           Column(children: [
             IconButton.filledTonal(
               style: const ButtonStyle(
-                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(30)),
+                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(40)),
               ),
               icon: const Icon(
                 Icons.qr_code,
@@ -64,12 +66,13 @@ class Conta extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-            const Text("QRcode")
+            const Text("QRcode",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
           ]),
           Column(children: [
             IconButton.filledTonal(
               style: const ButtonStyle(
-                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(30)),
+                fixedSize: WidgetStatePropertyAll<Size>(Size.fromRadius(40)),
               ),
               icon: const Icon(
                 Icons.attach_money,
@@ -77,7 +80,8 @@ class Conta extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-            const Text("Transferir")
+            const Text("Transferir",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
           ]),
         ],
       ),
@@ -86,10 +90,11 @@ class Conta extends StatelessWidget {
       ),
       const Card(
         elevation: 0,
-        child: ListTile(
-          title: Text("Meus Cartões"),
+        child: Padding(padding: EdgeInsets.all(10), child: ListTile(
+          title: Text("Meus Cartões",
+          style: TextStyle(fontWeight: FontWeight.bold),),
           leading: Icon(Icons.credit_card),
-        ),
+        ),)
       ),
       const SizedBox(
         height: 30,
@@ -99,7 +104,7 @@ class Conta extends StatelessWidget {
         child: Container(
             padding: const EdgeInsets.all(10),
             child: const ListTile(
-              title: Text("Guarde seu dinheiro em caixinhas"),
+              title: Text("Guarde seu dinheiro em caixinhas",style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF8A05BE))),
               subtitle: Text("Acessando a área de planejamento"),
             )),
       )

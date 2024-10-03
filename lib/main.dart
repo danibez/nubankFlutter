@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/appbody.dart';
+import 'package:nubank/homeScreen/appbody.dart';
+import 'package:nubank/profile.dart';
+import 'package:nubank/testess.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,33 +14,12 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          actions: [
-            IconButton(icon: const Icon(Icons.visibility_outlined),
-            color:  const Color(0xFFF5F5F5),
-              onPressed: () {},
-            ),
-            IconButton(icon: const Icon(Icons.question_mark_rounded, color: Color(0xFFF5F5F5)),
-              color:  const Color(0xFFF5F5F5),
-              onPressed: () {},
-            ),
-            IconButton(icon: const Icon(Icons.mark_email_read_outlined, color: Color(0xFFF5F5F5)),
-              color:  const Color(0xFFF5F5F5),
-              onPressed: () {},
-            ),
-          ],
-          leading: IconButton(
-              style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll<Color>(Color(0xFFBA4DE3))),
-              icon: const Icon(Icons.person_outline, color: Color(0xFFF5F5F5)),
-              color: const Color(0xFFF5F5F5),
-              onPressed: () {},
-            ),
-          backgroundColor: const Color(0xFF8A05BE),
-        ),
-        body: const AppBody()
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const AppBody(),
+        '/profile': (context) => const Profile(),
+        '/profile/test': (context) => Testess()
+      },
     );
   }
 }

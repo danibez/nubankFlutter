@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank/homeScreen/appbody.dart';
 import 'package:nubank/profile.dart';
-import 'package:nubank/testess.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,7 +17,6 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const AppBody(),
         '/profile': (context) => const Profile(),
-        '/profile/test': (context) => Testess()
       },
     );
   }

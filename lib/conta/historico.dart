@@ -61,7 +61,7 @@ class _HistoricoState extends State<Historico> {
                     icon: Icon(Icons.search)),
                   prefixIconColor: Colors.black,
                 ),),
-          // Historicogenerator(control.text)
+          Historicogenerator(control.text)
         ],
     );
   }

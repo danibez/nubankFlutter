@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank/conta/conta.dart';
 import 'package:nubank/homeScreen/appbody.dart';
 import 'package:nubank/profile.dart';
 
@@ -17,6 +18,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const AppBody(),
         '/profile': (context) => const Profile(),
+        '/minhaConta': (context) => const MinhaConta()
       },
     );
   }
